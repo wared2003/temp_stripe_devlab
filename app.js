@@ -2,7 +2,9 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 const stripe = Stripe(urlParams.get('publishableKey'));
-
+if (urlParams.get('success')){
+    window.close();
+}
 
 
 const options = {
