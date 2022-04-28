@@ -29,7 +29,7 @@ form.addEventListener('submit', async (event) => {
     //`Elements` instance that was used to create the Payment Element
     elements,
     confirmParams: {
-      return_url: 'http://stripe-devlab.vercel.app?success=trueee',
+      return_url: window.location.search,
     },
   });
 
