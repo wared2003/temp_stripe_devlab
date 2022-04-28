@@ -60,6 +60,7 @@ stripe.retrievePaymentIntent(options.clientSecret).then(({paymentIntent}) => {
     switch (paymentIntent.status) {
       case 'succeeded':
         message.innerText = 'Success! Payment received.';
+        console.log('okayyyy ')
         break;
   
       case 'processing':
