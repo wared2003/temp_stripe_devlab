@@ -1,7 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-const stripe = Stripe(urlParams.get('publishableKey'));
+const stripe = Stripe(urlParams.get('publishableKey') + urlParams.get('payment_intent_client_secret'));
 
 
 
@@ -33,6 +33,8 @@ form.addEventListener('submit', async (event) => {
     },
   });
 
+  https://stripe-devlab.vercel.app/?success=trueee&payment_intent=pi_3KtbGlJ36F2VD1N91VOFfVeu&payment_intent_client_secret=pi_3KtbGlJ36F2VD1N91VOFfVeu_secret_r7Dzbr08i2zNqG5TXknpMj2Ub&redirect_status=succeeded
+  
   if (error) {
     // This point will only be reached if there is an immediate error when
     // confirming the payment. Show error to your customer (for example, payment
