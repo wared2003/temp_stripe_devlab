@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 const stripe = Stripe(urlParams.get('publishableKey'));
-if (urlParams.get('success')){
+if (urlParams.get('success') === 'trueeee'){
     window.close();
 }
 
@@ -28,7 +28,7 @@ form.addEventListener('submit', async (event) => {
     //`Elements` instance that was used to create the Payment Element
     elements,
     confirmParams: {
-      return_url: 'https://example.com/order/123/complete',
+      return_url: 'http://stripe-devlab.vercel.app?success=trueee',
     },
   });
 
