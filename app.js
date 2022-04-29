@@ -43,6 +43,7 @@ form.addEventListener('submit', async (event) => {
     const messageContainer = document.querySelector('#error-message');
     messageContainer.textContent = error.message;
   } else {
+    
     console.log('ma grosse tebi')
   }
 });
