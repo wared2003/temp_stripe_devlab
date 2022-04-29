@@ -1,12 +1,8 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-if(urlParams.get('publishableKey') != null){
-    const stripe = Stripe(urlParams.get('publishableKey'))
-}
-else{
- const stripe = stripe(urlParams.get('payment_intent_client_secret'));
-}
+const stripe = Stripe(urlParams.get('publishableKey'))
+
 
 
 
