@@ -30,7 +30,7 @@ form.addEventListener('submit', async (event) => {
     //`Elements` instance that was used to create the Payment Element
     elements,
     confirmParams: {
-      return_url: window.location.href,
+      return_url: 'https://stripe-devlab.vercel.app/checkedout.html',
     },
   });
 
