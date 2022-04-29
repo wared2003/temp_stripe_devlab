@@ -46,7 +46,7 @@ form.addEventListener('submit', async (event) => {
     // Your customer will be redirected to your `return_url`. For some payment
     // methods like iDEAL, your customer will be redirected to an intermediate
     // site first to authorize the payment, then redirected to the `return_url`.
-    alert('kkkkkkkkkk')
+    alert("okayyyyyyy")
   }
 });
 
